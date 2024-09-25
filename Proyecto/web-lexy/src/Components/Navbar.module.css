@@ -1,0 +1,51 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a4564;
+
+}
+
+.navOpen {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #4a4564;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+
+}
+
+.navLink {
+    display: flex;
+    font-size: 2em;
+    font-weight: 400;
+    color: white;
+    padding-top: 80px ;
+}
+
+.border {
+    display: flex;
+    height: 1px;
+    animation-name: animacionborde;
+    animation-duration: 1s;
+    background-color: rgb(57, 145, 115);
+
+}
+
+@keyframes animacionborder{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 1px;
+    }
+}
+
+.logo{
+    display: flex;
+    color: white;
+    font-weight: 600 ;
+}
