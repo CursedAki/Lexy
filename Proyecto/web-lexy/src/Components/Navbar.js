@@ -1,12 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-scroll";
 import styles from  './Navbar.module.css';
 import { CiMenuFries } from "react-icons/ci";
 // import { RiCloseLargeFill } from "react-icons/ri";
 import { IoCloseOutline } from "react-icons/io5";
+import { useScrollPosition } from '../Hooks/scrollPosition';
 
 const Navbar = () => {
-  const[NavbarOpen, setNavbarOpen] = useState(false)
+  const[NavbarOpen, setNavbarOpen] = useState(false);
+  const [windowDimension, setWindowDimension] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+// Agarra el UseState de arriba, y setea la dimension de la pantalla
+  const detectDimension = () => {
+    setWindowDimension(
+      {width: window.innerWidth,
+      height: window.innerHeight,
+    })
+  }
+  useEffect(() => {
+    window.addEventListener('resize', detectDimension)
+    window.width > 800 && setNavbarOpen(false)
+    return () =>{
+    window.removeEventListener('resize', detectDimension)
+
+    }
+  },[windowDimension])
+
   const links = [
     {
       id: 1,
@@ -24,20 +46,19 @@ const Navbar = () => {
       id: 4,
       link: 'Beneficios',
     },
-    {
-      id: 5,
-      link: 'Contacto',
-    },
+
     
   ];
+  const scrollPosition = useScrollPosition();
+
   return (
-    <div className={!NavbarOpen ? styles.Navbar : styles.navOpen}>
+    <div className = {NavbarOpen ? styles.NavbarOpen : scrollPosition > 0 ? styles.navOnScroll : styles.Navbar} >
       {!NavbarOpen && <p className={styles.logo}> LEXY | Abogacia Digital </p>}  
-      {!NavbarOpen ? (
+      {!NavbarOpen && windowDimension.width < 800 ? (
         // Este es el que abre
         <CiMenuFries onClick={() => setNavbarOpen(!NavbarOpen)} 
         size={30}/>
-      ) : (
+      ) : windowDimension.width < 800 &&  (
       // Este cierra 
         <IoCloseOutline  
           onClick={() => setNavbarOpen(!NavbarOpen)}
@@ -45,17 +66,17 @@ const Navbar = () => {
           size={25}
         />
       )}
-     {NavbarOpen && (
-      <ul>
-      {links.map((x) => (
-        <div>
-          <Link 
-          onClick={() => setNavbarOpen(false)}
-          to={x.link}
-          smooth
-          duration={500}
-          className={styles.navLink}
-          >
+     {NavbarOpen  && (
+        <ul className={styles.linksContainer}>
+          {links.map((x) => (
+            <div>
+              <Link 
+                onClick={() => setNavbarOpen(false)}
+                to={x.link}
+                smooth
+                duration={500}
+                className={styles.navLink}
+              >
             {x.link === "HowWeWork" ? "How We Work" : x.link} 
           </Link>
           <div className={styles.border}></div>
@@ -63,7 +84,24 @@ const Navbar = () => {
       ))}
     </ul>
      )}
-  </div>
+     {windowDimension.width > 800 && (
+        <ul className={styles.linksContainer}>
+          {links.map((x) => (
+            <div>
+              <Link 
+                onClick={() => setNavbarOpen(false)}
+                to={x.link}
+                smooth
+                duration={500}
+                className={styles.navLink}>
+                {x.link === "HowWeWork" ? "How We Work" : x.link} 
+              </Link>
+            <div className={styles.border}></div>
+          </div>
+        ))}
+      </ul>
+      )}
+    </div>
   );
 };
 
