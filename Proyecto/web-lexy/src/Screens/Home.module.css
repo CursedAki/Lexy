@@ -1,0 +1,39 @@
+.home {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../public/Images/FondoIndex.jpg');
+    background-size: cover;         /* Asegura que la imagen cubra el contenedor */
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeat;   /* Evita que la imagen se repita */
+    padding: 20px 20px 255px;       /* Padding arriba, derecha, abajo */
+    
+    
+}
+
+.titleContainer{
+    padding-top: 80px;
+}
+
+.home p{
+    font-size: 2em;
+    color: white;
+    padding-top: 90px;
+}
+.callToAction {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.callToAction:hover{
+    padding: 15px;
+    cursor: pointer;
+}
+
+.BtnContainer{
+    display: flex;
+     
+}

@@ -56,7 +56,7 @@ const Navbar = () => {
       {!NavbarOpen && <p className={styles.logo}> LEXY | Abogacia Digital </p>}  
       {!NavbarOpen && windowDimension.width < 800 ? (
         // Este es el que abre
-        <CiMenuFries onClick={() => setNavbarOpen(!NavbarOpen)} 
+        <CiMenuFries color='#f1f1f1' onClick={() => setNavbarOpen(!NavbarOpen)} 
         size={30}/>
       ) : windowDimension.width < 800 &&  (
       // Este cierra 
