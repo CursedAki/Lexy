@@ -52,7 +52,7 @@ const Navbar = () => {
   const scrollPosition = useScrollPosition();
 
   return (
-    <div className = {NavbarOpen ? styles.NavbarOpen : scrollPosition > 0 ? styles.navOnScroll : styles.Navbar} >
+    <div className = {NavbarOpen ? styles.NavOpen : scrollPosition > 0 ? styles.navOnScroll : styles.Navbar} >
       {!NavbarOpen && <p className={styles.logo}> LEXY | Abogacia Digital </p>}  
       {!NavbarOpen && windowDimension.width < 800 ? (
         // Este es el que abre
