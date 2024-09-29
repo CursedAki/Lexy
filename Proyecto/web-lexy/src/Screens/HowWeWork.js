@@ -14,7 +14,7 @@ const HowWeWork = () => {
     {
       name: "Nombre Generico",
       description: "Especialista en derecho corporativo, Pato Pérez es conocido por su atención al detalle y su habilidad para resolver conflictos con precisión.",
-      image: require('../Assets/Miembro1.jpg')
+      image: require('../Assets/Miembro1.png')
     },
     {
       name: "Nombre Generico",

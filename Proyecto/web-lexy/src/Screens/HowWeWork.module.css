@@ -6,6 +6,13 @@
     background-position: center;
 }
 .howWeWork h1 {
+    text-shadow: 
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;
+    font-weight: 600;
+    font-size: 3em;
     color: white;
 }
   
@@ -18,9 +25,17 @@
 }
   
 .members {
+    font-weight: 1.5em;
+    text-shadow:     
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;
+    /* font-size: medium; */
+    color: white;
     width: 20%; /* Controla el tamaño de cada miembro del equipo */
     margin: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    /* background-color: rgb(74, 69, 100, 0.9); Fondo semi-transparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -33,6 +48,7 @@
 }
   
 .team-member h2 {
+    /* color: white;     */
     font-size: 1.5rem;
     margin: 10px 0;
 }
