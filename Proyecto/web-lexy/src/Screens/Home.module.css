@@ -23,7 +23,7 @@
 }
 .callToAction {
     color: white;
-    background-color: black;
+    background-color:#4a4564;
     padding: 10px;
     transition: 0.5s;
 }
@@ -33,7 +33,8 @@
     cursor: pointer;
 }
 
-.BtnContainer{
+.btnContainer{
     display: flex;
+    padding-left: 50%;
      
 }
