@@ -1,0 +1,255 @@
+[{
+  "_id": {
+    "$oid": "66ff197f36886fed9bb6382c"
+  },
+  "nombre": "Juan",
+  "apellidoPaterno": "Pérez",
+  "apellidoMaterno": "López",
+  "telefono": "555-1234",
+  "email": "juan.perez@example.com",
+  "password": "securePassword123",
+  "direccion": "Calle Falsa 123, Ciudad",
+  "rol": "usuario",
+  "fechaRegistro": "2023-09-15",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff198a36886fed9bb6382e"
+  },
+  "nombre": "Ana",
+  "apellidoPaterno": "García",
+  "apellidoMaterno": "Martínez",
+  "telefono": "555-5678",
+  "email": "ana.garcia@example.com",
+  "password": "anotherPassword456",
+  "direccion": "Av. Siempre Viva 456, Ciudad",
+  "rol": "admin",
+  "fechaRegistro": "2024-01-20",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff199436886fed9bb63830"
+  },
+  "nombre": "Carlos",
+  "apellidoPaterno": "Hernández",
+  "apellidoMaterno": "Ramírez",
+  "telefono": "555-9876",
+  "email": "carlos.hernandez@example.com",
+  "password": "strongPass789",
+  "direccion": "Plaza Mayor 789, Ciudad",
+  "rol": "abogado",
+  "fechaRegistro": "2023-05-10",
+  "especialidad": "casos delictivos"
+},
+{
+  "_id": {
+    "$oid": "66ff199c36886fed9bb63832"
+  },
+  "nombre": "Lucía",
+  "apellidoPaterno": "Fernández",
+  "apellidoMaterno": "Gómez",
+  "telefono": "555-4321",
+  "email": "lucia.fernandez@example.com",
+  "password": "passwordSecure012",
+  "direccion": "Calle Libertad 321, Ciudad",
+  "rol": "usuario",
+  "fechaRegistro": "2023-08-25",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff19a436886fed9bb63834"
+  },
+  "nombre": "Miguel",
+  "apellidoPaterno": "Rodríguez",
+  "apellidoMaterno": "Vega",
+  "telefono": "555-6543",
+  "email": "miguel.rodriguez@example.com",
+  "password": "passW0rd345",
+  "direccion": "Av. Central 654, Ciudad",
+  "rol": "abogado",
+  "fechaRegistro": "2024-02-14",
+  "especialidad": "pensión de alimentos"
+},
+{
+  "_id": {
+    "$oid": "66ff26b436886fed9bb63842"
+  },
+  "nombre": "Roberto",
+  "apellidoPaterno": "Sánchez",
+  "apellidoMaterno": "Díaz",
+  "telefono": "555-1122",
+  "email": "roberto.sanchez@example.com",
+  "password": "passRoberto22",
+  "direccion": "Calle Sol 123, Ciudad",
+  "rol": "usuario",
+  "fechaRegistro": "2023-04-12",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff26bc36886fed9bb63844"
+  },
+  "nombre": "María",
+  "apellidoPaterno": "Gómez",
+  "apellidoMaterno": "Castillo",
+  "telefono": "555-3344",
+  "email": "maria.gomez@example.com",
+  "password": "mariaPass3344",
+  "direccion": "Av. Luna 789, Ciudad",
+  "rol": "abogado",
+  "fechaRegistro": "2024-03-18",
+  "especialidad": "divorcios"
+},
+{
+  "_id": {
+    "$oid": "66ff26c536886fed9bb63846"
+  },
+  "nombre": "Eduardo",
+  "apellidoPaterno": "Torres",
+  "apellidoMaterno": "Lara",
+  "telefono": "555-5566",
+  "email": "eduardo.torres@example.com",
+  "password": "eduardoPass56",
+  "direccion": "Calle Estrella 654, Ciudad",
+  "rol": "admin",
+  "fechaRegistro": "2023-11-23",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff26cd36886fed9bb63848"
+  },
+  "nombre": "Fernanda",
+  "apellidoPaterno": "Ortiz",
+  "apellidoMaterno": "Ruiz",
+  "telefono": "555-7788",
+  "email": "fernanda.ortiz@example.com",
+  "password": "passFernanda88",
+  "direccion": "Av. Ríos 321, Ciudad",
+  "rol": "abogado",
+  "fechaRegistro": "2024-02-05",
+  "especialidad": "pensión de alimentos"
+},
+{
+  "_id": {
+    "$oid": "66ff26d736886fed9bb6384a"
+  },
+  "nombre": "David",
+  "apellidoPaterno": "Ramos",
+  "apellidoMaterno": "Molina",
+  "telefono": "555-9900",
+  "email": "david.ramos@example.com",
+  "password": "passDavid9900",
+  "direccion": "Calle Olmos 987, Ciudad",
+  "rol": "usuario",
+  "fechaRegistro": "2023-07-07",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff26df36886fed9bb6384c"
+  },
+  "nombre": "Clara",
+  "apellidoPaterno": "Salazar",
+  "apellidoMaterno": "Pérez",
+  "telefono": "555-1230",
+  "email": "clara.salazar@example.com",
+  "password": "claraPass1230",
+  "direccion": "Av. Bosques 222, Ciudad",
+  "rol": "usuario",
+  "fechaRegistro": "2024-04-01",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff26e636886fed9bb6384e"
+  },
+  "nombre": "Sofía",
+  "apellidoPaterno": "Vargas",
+  "apellidoMaterno": "Mejía",
+  "telefono": "555-4567",
+  "email": "sofia.vargas@example.com",
+  "password": "passSofia4567",
+  "direccion": "Calle Primavera 456, Ciudad",
+  "rol": "admin",
+  "fechaRegistro": "2023-10-12",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff270736886fed9bb63850"
+  },
+  "nombre": "Daniel",
+  "apellidoPaterno": "Morales",
+  "apellidoMaterno": "Cabrera",
+  "telefono": "555-6789",
+  "email": "daniel.morales@example.com",
+  "password": "danielPass6789",
+  "direccion": "Av. Libertad 101, Ciudad",
+  "rol": "usuario",
+  "fechaRegistro": "2024-05-10",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff270f36886fed9bb63852"
+  },
+  "nombre": "Valeria",
+  "apellidoPaterno": "Fuentes",
+  "apellidoMaterno": "Núñez",
+  "telefono": "555-8901",
+  "email": "valeria.fuentes@example.com",
+  "password": "valeriaPass8901",
+  "direccion": "Calle Los Andes 202, Ciudad",
+  "rol": "abogado",
+  "fechaRegistro": "2023-09-14",
+  "especialidad": "divorcios"
+},
+{
+  "_id": {
+    "$oid": "66ff271636886fed9bb63854"
+  },
+  "nombre": "Raúl",
+  "apellidoPaterno": "Espinoza",
+  "apellidoMaterno": "Castro",
+  "telefono": "555-2345",
+  "email": "raul.espinoza@example.com",
+  "password": "raulPass2345",
+  "direccion": "Av. América 303, Ciudad",
+  "rol": "usuario",
+  "fechaRegistro": "2024-02-08",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "66ff271c36886fed9bb63856"
+  },
+  "nombre": "Elena",
+  "apellidoPaterno": "Cruz",
+  "apellidoMaterno": "Reyes",
+  "telefono": "555-3456",
+  "email": "elena.cruz@example.com",
+  "password": "elenaPass3456",
+  "direccion": "Calle Independencia 404, Ciudad",
+  "rol": "admin",
+  "fechaRegistro": "2023-12-03",
+  "especialidad": "no"
+},
+{
+  "_id": {
+    "$oid": "6701949dd02238fa7d84e96b"
+  },
+  "nombre": "Erick",
+  "apellidoPaterno": "Araya",
+  "apellidoMaterno": "Cayuleo",
+  "telefono": "333-3456",
+  "email": "erick.franco@example.com",
+  "password": "erickPass3456",
+  "direccion": "Calle amigoerick 404, Ciudad",
+  "rol": "abogado",
+  "fechaRegistro": "2023-12-21",
+  "especialidad": "casos delictivos"
+}]

@@ -19,16 +19,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { consultas, users } from "@prisma/client";
+import { consulta, usuario } from "@prisma/client";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export default function page() {
 
-  const [users, setUsers] = useState<users[]>([])
+  const [usuarios, setUsers] = useState<usuario[]>([])
 
   const [busqueda, setBusqueda] = useState('');
 
-  const [consultas, setConsulta] = useState<consultas[]>([]);
+  const [consultas, setConsulta] = useState<consulta[]>([]);
 
   const [selectedConsultaId, setSelectedConsultaId] = useState<string | null>(null);
 
@@ -54,9 +54,9 @@ export default function page() {
 
 
 
-  const usuariofiltrado: users[] = users.filter(user =>
-    user.nombre.toLowerCase().includes(busqueda.toLowerCase()) || 
-    user.apellidoPaterno.toLowerCase().includes(busqueda.toLowerCase())
+  const usuariofiltrado: usuario[] = usuarios.filter(usuario =>
+    usuario.nombre.toLowerCase().includes(busqueda.toLowerCase()) || 
+    usuario.apellidoPaterno.toLowerCase().includes(busqueda.toLowerCase())
   );
 
   return (
@@ -79,11 +79,11 @@ export default function page() {
         <h2 className="text-2xl font-semibold text-slate-900 py-2 text-center">Listado de Abogados</h2>
         <Input type="text" className="my-4" placeholder="Buscar..." value={busqueda} onChange={cambiobuscador} />
         <Accordion className="h-65 overflow-auto" type="single" collapsible>
-        {usuariofiltrado.filter(user => user.rol === "abogado").map(user => (
-          <AccordionItem key={user.id} value={user.id}>
-            <AccordionTrigger>{user.nombre} {user.apellidoPaterno}</AccordionTrigger>
+        {usuariofiltrado.filter(usuario => usuario.rol === "abogado").map(usuario => (
+          <AccordionItem key={usuario.id} value={usuario.id}>
+            <AccordionTrigger>{usuario.nombre} {usuario.apellidoPaterno}</AccordionTrigger>
             <AccordionContent>
-              {user.rol}
+              {usuario.rol}
             </AccordionContent>
           </AccordionItem>
         ))}
@@ -127,8 +127,8 @@ export default function page() {
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Abogados</SelectLabel>
-          {users.filter(user => user.rol === 'abogado').map(user => (
-          <SelectItem value={user.id}>{user.nombre + ' ' + user.apellidoPaterno}</SelectItem>
+          {usuarios.filter(usuario => usuario.rol === 'abogado').map(usuario => (
+          <SelectItem value={usuario.id}>{usuario.nombre + ' ' + usuario.apellidoPaterno}</SelectItem>
           ))}
         </SelectGroup>
       </SelectContent>

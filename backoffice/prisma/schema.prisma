@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model users {
+model usuario {
   id     String @id @default(auto()) @map("_id") @db.ObjectId
   nombre String
   apellidoPaterno String
@@ -18,10 +18,10 @@ model users {
   direccion String
   rol String
   fechaRegistro String
-  Especialidad String
+  especialidad String
 }
 
-model consultas {
+model consulta {
   id     String @id @default(auto()) @map("_id") @db.ObjectId
   usuarioId String
   pregunta String
@@ -37,6 +37,7 @@ model consultas {
   contacto_abogado String
   contacto_cliente String
   direccion_cliente String
+  email_abogado String
   email_cliente String
   especialidad String
   nombre_abogado String

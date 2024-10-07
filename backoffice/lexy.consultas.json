@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "66ff1fb536886fed9bb6383a"
+  },
+  "usuarioId": "66ff197f36886fed9bb6382c",
+  "pregunta": "¿Cómo puedo solicitar una pensión de alimentos?",
+  "respuestaBot": "Para solicitar una pensión de alimentos, debes presentar una demanda ante el juez de familia.",
+  "derivado": true,
+  "estadoConsulta": "asignado",
+  "fechaConsulta": "2024-01-10T14:30:00",
+  "abogadoAsignado": "66ff19a436886fed9bb63834",
+  "apellidom_abogado": "Vega",
+  "apellidom_cliente": "López",
+  "apellidop_abogado": "Rodríguez",
+  "apellidop_cliente": "Pérez",
+  "contacto_abogado": "555-6543",
+  "contacto_cliente": "555-1234",
+  "direccion_cliente": "Calle Falsa 123, Ciudadd",
+  "email_abogado": "miguel.rodriguez@example.com",
+  "email_cliente": "juan.perez@example.com",
+  "especialidad": "pensión de alimentos",
+  "nombre_abogado": "Miguel",
+  "nombre_cliente": "Juan"
+},
+{
+  "_id": {
+    "$oid": "6702cdc0fe2c44342d0a0b7f"
+  },
+  "usuarioId": "66ff271636886fed9bb63854",
+  "pregunta": "¿Qué debo hacer si soy víctima de un delito?",
+  "respuestaBot": "Si eres víctima de un delito, lo primero que debes hacer es denunciar el hecho ante las autoridades competentes...",
+  "derivado": true,
+  "estadoConsulta": "asignado",
+  "fechaConsulta": "2024-03-12T09:45:00",
+  "abogadoAsignado": "6701949dd02238fa7d84e96b",
+  "apellidom_abogado": "Cayuleo",
+  "apellidom_cliente": "Castro",
+  "apellidop_abogado": "Araya",
+  "apellidop_cliente": "Espinoza",
+  "contacto_abogado": "333-3456",
+  "contacto_cliente": "555-2345",
+  "direccion_cliente": "Av. América 303, Ciudad",
+  "email_abogado": "erick.franco@example.com",
+  "email_cliente": "raul.espinoza@example.com",
+  "especialidad": "casos delictivos",
+  "nombre_abogado": "Erick",
+  "nombre_cliente": "Raúl"
+},
+{
+  "_id": {
+    "$oid": "67030770fe2c44342d0a0b90"
+  },
+  "usuarioId": "66ff26d736886fed9bb6384a",
+  "pregunta": "Necesito aumentar la pensión porque no me alcanza, ¿que debo hacer?",
+  "respuestaBot": "En este caso, debes presentar una solicitud...",
+  "derivado": false,
+  "estadoConsulta": "no asignado",
+  "fechaConsulta": "2024-03-15T09:45:00",
+  "abogadoAsignado": "no",
+  "apellidom_abogado": "no",
+  "apellidom_cliente": "Molina",
+  "apellidop_abogado": "no",
+  "apellidop_cliente": "Ramos",
+  "contacto_abogado": "no",
+  "contacto_cliente": "555-2345",
+  "direccion_cliente": "Calle Olmos 987, Ciudad",
+  "email_abogado": "no",
+  "email_cliente": "david.ramos@example.com",
+  "especialidad": "Pensión de alimentos",
+  "nombre_abogado": "no",
+  "nombre_cliente": "David"
+}]

@@ -1,7 +1,7 @@
-import { consultas, users } from '@prisma/client';
+import { consulta, usuario } from '@prisma/client';
 
 export const getUsers = async () => {
-    const response = await fetch('/api/users', {
+    const response = await fetch('/api/usuarios', {
       method: 'GET'
     })
     if (response.statusText !== 'ok'){
