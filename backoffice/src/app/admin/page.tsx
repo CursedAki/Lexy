@@ -19,16 +19,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { consulta, usuario } from "@prisma/client";
+import Usuario, { IUsuario } from '@/models/usuario';
+import Consulta, { IConsulta} from '@/models/consulta';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export default function page() {
 
-  const [usuarios, setUsers] = useState<usuario[]>([])
+  const [usuarios, setUsers] = useState<IUsuario[]>([])
 
   const [busqueda, setBusqueda] = useState('');
 
-  const [consultas, setConsulta] = useState<consulta[]>([]);
+  const [consultas, setConsulta] = useState<IConsulta[]>([]);
 
   const [selectedConsultaId, setSelectedConsultaId] = useState<string | null>(null);
 
@@ -54,7 +55,7 @@ export default function page() {
 
 
 
-  const usuariofiltrado: usuario[] = usuarios.filter(usuario =>
+  const usuariofiltrado: IUsuario[] = usuarios.filter(usuario =>
     usuario.nombre.toLowerCase().includes(busqueda.toLowerCase()) || 
     usuario.apellidoPaterno.toLowerCase().includes(busqueda.toLowerCase())
   );
@@ -80,7 +81,7 @@ export default function page() {
         <Input type="text" className="my-4" placeholder="Buscar..." value={busqueda} onChange={cambiobuscador} />
         <Accordion className="h-65 overflow-auto" type="single" collapsible>
         {usuariofiltrado.filter(usuario => usuario.rol === "abogado").map(usuario => (
-          <AccordionItem key={usuario.id} value={usuario.id}>
+          <AccordionItem key={usuario._id} value={usuario._id}>
             <AccordionTrigger>{usuario.nombre} {usuario.apellidoPaterno}</AccordionTrigger>
             <AccordionContent>
               {usuario.rol}
@@ -107,7 +108,7 @@ export default function page() {
       <TableBody>
         
         {consultas.map((consulta) => (
-          <TableRow key={consulta.id}>
+          <TableRow key={consulta._id}>
           <TableCell><Checkbox/></TableCell>
             <TableCell className="font-medium">{consulta.nombre_cliente}</TableCell>
             <TableCell>{consulta.apellidom_cliente}</TableCell>
@@ -128,15 +129,15 @@ export default function page() {
         <SelectGroup>
           <SelectLabel>Abogados</SelectLabel>
           {usuarios.filter(usuario => usuario.rol === 'abogado').map(usuario => (
-          <SelectItem value={usuario.id}>{usuario.nombre + ' ' + usuario.apellidoPaterno}</SelectItem>
+          <SelectItem value={usuario._id}>{usuario.nombre + ' ' + usuario.apellidoPaterno}</SelectItem>
           ))}
         </SelectGroup>
       </SelectContent>
     </Select>
             </TableCell>
             <TableCell className="flex gap-4 items-center">
-              <Button onClick={() => openModal(consulta.id)} size='icon' variant="outline">+</Button>
-                <Modal isOpen={selectedConsultaId === consulta.id} onClose={closeModal}>
+              <Button onClick={() => openModal(consulta._id)} size='icon' variant="outline">+</Button>
+                <Modal isOpen={selectedConsultaId === consulta._id} onClose={closeModal}>
                   <h2 className="text-xl font-bold">Caso cliente {consulta.nombre_cliente}</h2>
                   <p>Nombre completo cliente: {consulta.nombre_cliente} {consulta.apellidop_cliente} {consulta.apellidom_cliente}</p>
                   <p>fecha consulta: {consulta.fechaConsulta}</p>

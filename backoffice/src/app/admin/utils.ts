@@ -1,5 +1,3 @@
-import { consulta, usuario } from '@prisma/client';
-
 export const getUsers = async () => {
     const response = await fetch('/api/usuarios', {
       method: 'GET'

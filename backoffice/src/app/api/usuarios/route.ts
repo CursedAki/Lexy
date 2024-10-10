@@ -1,42 +1,19 @@
-import { NextResponse, NextRequest } from 'next/server';
-
-import { prisma } from '@/lib/prisma'; // Reutiliza la instancia de Prisma
+import connectMongo from '../../../lib/mongoose'; // Importar la conexión
+import Usuario from '@/models/usuario'; // Importar el modelo de usuario
+import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
+    // Conectar a la base de datos
+    await connectMongo();
 
-    const usuarios = await prisma.usuario.findMany();
+    // Obtener todos los usuarios de la colección 'usuario'
+    const usuarios = await Usuario.find({})
+    console.log(usuarios)
+    // Retornar la respuesta en formato JSON
     return NextResponse.json(usuarios);
   } catch (error) {
-    console.error("Error fetching usuarios:", error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
-  }
-}
-
-export async function POST(request: NextRequest) {
-  try {
-
-    const { nombre, apellidoPaterno, apellidoMaterno, telefono, email, password, direccion, rol, fechaRegistro, especialidad } = await request.json();
-
-
-    const nuevoUsuario = await prisma.usuario.create({
-      data: {
-        nombre,
-        apellidoPaterno,
-        apellidoMaterno,
-        telefono,
-        email,
-        password,
-        direccion,
-        rol,
-        fechaRegistro,
-        especialidad
-      }
-    });
-
-    return NextResponse.json(nuevoUsuario, { status: 201 }); // Retorna el nuevo usuario creado con estado 201
-  } catch (error) {
-    console.error("Error creando usuario:", error);
+    console.error('Error fetching usuarios:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
