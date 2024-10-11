@@ -53,56 +53,58 @@ const Navbar = () => {
 
   return (
     <div className = {NavbarOpen ? styles.NavOpen : scrollPosition > 0 ? styles.navOnScroll : styles.Navbar} >
-      {!NavbarOpen && <p className={styles.logo}> LEXY | Abogacia Digital </p>}  
-      {!NavbarOpen && windowDimension.width < 800 ? (
-        // Este es el que abre
-        <CiMenuFries color='#f1f1f1' onClick={() => setNavbarOpen(!NavbarOpen)} 
-        size={30}/>
-      ) : windowDimension.width < 800 &&  (
-      // Este cierra 
-        <IoCloseOutline  
-          onClick={() => setNavbarOpen(!NavbarOpen)}
-          color='#f1f1f1'
-          size={25}
-        />
-      )}
-     {NavbarOpen  && (
-        <ul className={styles.linksContainer}>
-          {links.map((x) => (
-            <div>
-              <Link 
-                onClick={() => setNavbarOpen(false)}
-                to={x.link}
-                smooth
-                duration={500}
-                className={styles.navLink}
-              >
-            {x.link === "HowWeWork" ? "How We Work" : x.link} 
-          </Link>
+    {!NavbarOpen && <p className={styles.logo}> LEXY | Abogacia Digital </p>}
+    {!NavbarOpen && windowDimension.width < 800 ? (
+      // Este es el que abre
+      <CiMenuFries color='#f1f1f1' onClick={() => setNavbarOpen(!NavbarOpen)} 
+      size={30}/>
+    ) : windowDimension.width < 800 &&  (
+    // Este cierra 
+      <IoCloseOutline
+        onClick={() => setNavbarOpen(!NavbarOpen)}
+        color='#f1f1f1'
+        size={25}
+      />
+    )}
+   {NavbarOpen  && (
+      <ul className={styles.linksContainer}>
+        {links.map((x) => (
+          <div   >
+            <Link
+              key={x.id} 
+              onClick={() => setNavbarOpen(false)}
+              to={x.link}
+              smooth
+              duration={500}
+              className={styles.navLink}
+            >
+          {x.link === "HowWeWork" ? "How We Work" : x.link} 
+        </Link>
+        <div className={styles.border}></div>
+      </div>
+    ))}
+  </ul>
+   )}
+   {windowDimension.width > 800 && (
+      <ul className={styles.linksContainer}>
+        {links.map((x) => (
+          <div key={x.id}>
+            <Link
+              key={x.id} 
+              onClick={() => setNavbarOpen(false)}
+              to={x.link}
+              smooth
+              duration={500}
+              className={styles.navLink}>
+              {x.link === "HowWeWork" ? "How We Work" : x.link} 
+            </Link>
           <div className={styles.border}></div>
         </div>
       ))}
     </ul>
-     )}
-     {windowDimension.width > 800 && (
-        <ul className={styles.linksContainer}>
-          {links.map((x) => (
-            <div>
-              <Link 
-                onClick={() => setNavbarOpen(false)}
-                to={x.link}
-                smooth
-                duration={500}
-                className={styles.navLink}>
-                {x.link === "HowWeWork" ? "How We Work" : x.link} 
-              </Link>
-            <div className={styles.border}></div>
-          </div>
-        ))}
-      </ul>
-      )}
-    </div>
-  );
+    )}
+  </div>
+  )
 };
 
 export default Navbar

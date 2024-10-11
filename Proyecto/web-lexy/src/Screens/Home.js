@@ -6,15 +6,15 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.titleContainer}>
-        <p1>
+        <h1>
           <b>Confia en la justicia:</b> 
           <b>Soluciones Legales con Innovacion</b>
             <br></br>
-        </p1>
-          <p2>
+        </h1>
+          <h2>
           Nuestro equipo de expertos y un avanzado chatbot <br/>
           están aqui para ayudarte en cada paso.
-          </p2>   
+          </h2>   
         
       </div>
       
