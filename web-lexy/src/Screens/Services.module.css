@@ -1,0 +1,19 @@
+.webImage{
+    width: 379px;
+    height: 350px;
+}
+
+.services{
+    padding-top: 10px;
+    flex-direction: column;
+    display: flex;
+    background-color: #4a4564;
+}
+
+.services p{
+    color: white;
+    padding-bottom: 60px;
+    font-size: 1.5em;
+    text-align: center;
+
+}

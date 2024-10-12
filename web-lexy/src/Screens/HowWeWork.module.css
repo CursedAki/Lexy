@@ -1,0 +1,61 @@
+.howWeWork {
+    text-align: center;
+    padding: 20px;
+    background-image: url('../Assets/fondoTeam.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+.howWeWork h1 {
+    text-shadow: 
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;
+    font-weight: 600;
+    font-size: 3em;
+    color: white;
+}
+  
+.team {
+    display: flex;
+    justify-content: space-around; /* Distribuye uniformemente */
+    align-items: center; /* Alinea verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente fila si la pantalla es más pequeña */
+    padding: 20px;
+}
+  
+.members {
+    font-weight: 1.5em;
+    text-shadow:     
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;
+    /* font-size: medium; */
+    color: white;
+    width: 20%; /* Controla el tamaño de cada miembro del equipo */
+    margin: 10px;
+    /* background-color: rgb(74, 69, 100, 0.9); Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+  
+.team-member h2 {
+    /* color: white;     */
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+  
+.team-member p {
+    font-size: 1rem;
+    color: #333;
+}
+
+  

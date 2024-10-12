@@ -1,0 +1,56 @@
+.home {
+    height: 100%;
+    width: 97.3%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Assets/FondoIndex.jpg');
+    background-size: cover;         /* Asegura que la imagen cubra el contenedor */
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeat;   /* Evita que la imagen se repita */
+    padding: 20px 20px 255px;       /* Padding arriba, derecha, abajo */
+    /* overflow-x: hidden; */
+    
+}
+
+.titleContainer{
+    padding-top: 50px;
+}
+
+.home h1{
+    display: flex;
+    text-shadow:     
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;;
+    font-size: 2.1em;
+    color: white;
+    padding-top: 20%;
+}
+.home h2{
+    text-shadow:     
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;
+    font-size: 1.5em;
+    color: white;
+    padding-top: 120px;
+}
+.callToAction {
+    color: white;
+    background-color:#4a4564;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.callToAction:hover{
+    padding: 15px;
+    cursor: pointer;
+}
+
+.btnContainer{
+    display: flex;
+    padding-left: 50%;
+     
+}
