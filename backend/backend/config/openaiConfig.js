@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import dotenv from 'dotenv';
 
 dotenv.config();
-const apiKey = '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'
+const apiKey = 'CODIGO SECRETO ACÁ'
 
 const openai = new OpenAI({
   
